@@ -28,7 +28,6 @@ export function CardBody(props) {
 			<h5 className="card-title">{props.title}</h5>
 			<p className="card-text">{props.description}</p>
 			<p className="card-text"><small className="text-muted">{props.authors}</small></p>
-			{/* <button className="btn btn-danger" onClick={props.save}>Save Book</button> */}
 		</div>
 	);
 };
