@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Form, Input, FormBtn } from "../components/Form";
 import { Link } from "react-router-dom";
 import { CardDeck, Card, Image, CardBody, CardButton } from "../components/ResultCard";
+import Nav from "../components/Nav";
 import API from "../utils/API";
 import { NoResult } from "../components/NoResults";
 
@@ -51,6 +52,9 @@ class Search extends Component {
 	render() {
 		return (
 			<div>
+			<Nav>
+				GoogleBooks Search!
+			</Nav>
 				<Link to={"/saved"}>
 					<strong>
 						Go to Saved Books

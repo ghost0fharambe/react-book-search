@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { NoResult } from "../components/NoResults";
 import { CardDeck, Card, Image, CardBody } from "../components/ResultCard";
 import { DeleteBtn } from "../components/DeleteBtn";
+import Nav from "../components/Nav";
 import API from "../utils/API";
 
 class Saved extends Component {
@@ -30,6 +31,7 @@ class Saved extends Component {
 	render() {
 		return (
 			<div>
+			<Nav link="/">Saved Books</Nav>
 				<div className="jumbotron">
 					<h1 className="display-4">GoogleBooks Search!</h1>
 					<p className="lead">Saved Books</p>
