@@ -1,4 +1,6 @@
 import React from "react";
+import "./style.css";
+
 
 export function CardDeck(props) {
 	return (
@@ -18,7 +20,7 @@ export function Card(props) {
 
 export function Image(props) {
 	return (
-		<img className="card-img-top" src={props.src} alt="img" />
+		<img className="card-img-top img-container" src={props.src} alt="img" />
 	);
 };
 
@@ -34,4 +36,10 @@ export function CardBody(props) {
 
 export function CardButton(props) {
 	return (<button className="btn btn-danger" onClick={props.save}>Save Book</button>)
+}
+
+export function BookLink(props) {
+	return (
+		<a href={props.link}>{props.children}</a>
+	)
 }

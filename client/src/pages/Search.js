@@ -52,9 +52,7 @@ class Search extends Component {
 	render() {
 		return (
 			<div>
-			<Nav>
-				GoogleBooks Search!
-			</Nav>
+			<Nav />
 				<Link to={"/saved"}>
 					<strong>
 						Go to Saved Books

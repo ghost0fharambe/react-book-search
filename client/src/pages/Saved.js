@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { NoResult } from "../components/NoResults";
-import { CardDeck, Card, Image, CardBody } from "../components/ResultCard";
+import { CardDeck, Card, Image, CardBody, BookLink } from "../components/ResultCard";
 import { DeleteBtn } from "../components/DeleteBtn";
 import Nav from "../components/Nav";
 import API from "../utils/API";
@@ -31,7 +31,7 @@ class Saved extends Component {
 	render() {
 		return (
 			<div>
-			<Nav link="/">Saved Books</Nav>
+			<Nav />
 				<div className="jumbotron">
 					<h1 className="display-4">GoogleBooks Search!</h1>
 					<p className="lead">Saved Books</p>
@@ -47,6 +47,7 @@ class Saved extends Component {
 									<Card key={book._id}>
 										<Image src={book.image} />
 										<CardBody title={book.title} description={book.description} authors={book.authors} />
+										<BookLink link={book.link}>Google Books Link</BookLink>
 										<DeleteBtn onClick={() => this.deleteBook(book._id)} />
 									</Card>
 								))}
