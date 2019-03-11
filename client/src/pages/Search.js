@@ -52,12 +52,7 @@ class Search extends Component {
 	render() {
 		return (
 			<div>
-			<Nav />
-				<Link to={"/saved"}>
-					<strong>
-						Go to Saved Books
-					</strong>
-				</Link>
+				<Nav />
 				<Form>
 					<Input
 						value={this.state.title}
@@ -66,20 +61,25 @@ class Search extends Component {
 						placeholder="Title to search"
 					/>
 					<FormBtn onClick={this.handleFormSubmit}>Search Book</FormBtn>
+					<Link to={"/saved"}>
+						<strong>
+							Go to Saved Books
+					</strong>
+					</Link>
 				</Form>
 				{this.state.books.length ? (
-				<CardDeck>
-					{this.state.books.map((book, i) => (
-						<Card key={i}>
-							<Image src={book.image} />
-							<CardBody title={book.title} save={() => this.saveBook(book)} description={book.description} authors={book.authors} />
-							<CardButton save={() => this.saveBook(book)} />
-						</Card>
-					))}
-				</CardDeck>
+					<CardDeck>
+						{this.state.books.map((book, i) => (
+							<Card key={i}>
+								<Image src={book.image} />
+								<CardBody title={book.title} save={() => this.saveBook(book)} description={book.description} authors={book.authors} />
+								<CardButton save={() => this.saveBook(book)} />
+							</Card>
+						))}
+					</CardDeck>
 				) : (
-					<NoResult />
-				)}
+						<NoResult />
+					)}
 			</div>
 		)
 	}
